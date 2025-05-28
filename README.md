@@ -9,15 +9,19 @@ This repository contains my solutions for the AIC assignment, covering 3 technic
 
 2. Navigate to Technical folder and install the 3 .ipynb file.
    - To use GPU support for fast execution, use **Google Colab**:
-   1.**Sign in** to your Google account (if not already logged in).  
-   2. Upload `Problem1.ipynb`, `Problem2.ipynb`, `Problem3.ipynb` to [Google Colab](https://colab.research.google.com/).  
+   1.**Sign in** to your Google account (if not already logged in).
+       
+   2. Upload `Problem1.ipynb`, `Problem2.ipynb`, `Problem3.ipynb` to [Google Colab](https://colab.research.google.com/).
+      
    3. Enable GPU: Runtime > Change runtime type > GPU.
+      
    4. Run each cell one by one
 
 3. Files
    Fashion-MNIST Dataset:
    https://drive.google.com/drive/folders/1qZNwYOW53GZYZjpmsSpZMBNh1PEQumnb?usp=sharing
    fashion_mnist: Built-in dataset from Keras, automatically downloaded.
+   
    BERT Text Classification Dataset:
    https://drive.google.com/file/d/19o5KeyLL0Hio-OHJyxpUKdymZMSfIjc/view?usp = sharing
    
@@ -56,14 +60,20 @@ This repository contains my solutions for the AIC assignment, covering 3 technic
 
 ## 📚 External Resources Used
 Hugging Face Transformers: https://huggingface.co/transformers/
+
 NLTK (Natural Language Toolkit): https://www.nltk.org/
+
 Scikit-learn: https://scikit-learn.org/stable/
+
 Matplotlib: https://matplotlib.org/
 
 ## 🛠️ Error Handling and Troubleshooting
  ModuleNotFoundError: Ensure all dependencies are installed via pip.
+ 
  FileNotFoundError:	Check if the dataset path is correct. Update the notebook path if the file location changes.
+ 
  ValueError during training:	Ensure label encoding and input formats are consistent.
+ 
  CUDA Out of Memory:	Use smaller batch sizes or switch to CPU execution.
 
 ## Problem-2: Fashion MNIST Classification using ResNet50
@@ -167,6 +177,14 @@ FAISS by Facebook: https://github.com/facebookresearch/faiss
 Sentence Transformers: https://www.sbert.net/
 
 Groq API: https://groq.com/
+
+## Non Technical Folder
+
+It contains two .md files that has:
+
+## A detailed 1-month preparation plan for an AI hackathon
+
+## My SOP for joing AI community
 
 
 
