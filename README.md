@@ -129,7 +129,31 @@ Keras Applications: https://keras.io/api/applications/
 
 5. ImportError: Required packages not found.	Run pip install tensorflow scikit-learn matplotlib.
 
-    
+
+## Problem-3: Retrieval-Augmented Generation (RAG) over PDF
+
+This notebook implements a PDF-based semantic search engine using natural language processing techniques. It enables a user to upload a PDF file, extract its content, and then ask questions or retrieve relevant information from it using vector similarity.
+
+## Save Your Groq API Key
+  Save you api key in a text file then upload it into colab after running this 
+
+   ```with open("api_key.txt", "r") as f:
+      api_key = f.read().strip() ```
+
+
+1. ## PDF Text Extraction:
+The notebook uses the PyMuPDF (fitz) library to read and extract raw text from PDF files. This allows handling of multi-page documents and prepares the text for further processing.
+
+2. ## Text Chunking for Context Preservation: The extracted text is split into overlapping chunks using RecursiveCharacterTextSplitter, maintaining semantic continuity between chunks. This is critical for ensuring accurate embeddings and downstream query responses.
+
+Embedding and Similarity Indexing: Each chunk is converted into a numerical vector using a language model (via LangChain). These vectors are stored in a FAISS index, enabling efficient similarity-based retrieval of text passages.
+
+Query Matching and Retrieval: When a user submits a query, it is embedded and compared to the indexed vectors. The system retrieves the top-k most semantically similar text chunks from the original document, enabling intelligent search and question answering over unstructured data.
+
+
+
+
+
 
 
 
