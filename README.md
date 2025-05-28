@@ -137,18 +137,36 @@ This notebook implements a PDF-based semantic search engine using natural langua
 ## Save Your Groq API Key
   Save you api key in a text file then upload it into colab after running this 
 
-   ```with open("api_key.txt", "r") as f:
-      api_key = f.read().strip() ```
+  <pre> ```python with open("api_key.txt", "r") as f: api_key = f.read().strip() ``` </pre>
 
-
+  
 1. ## PDF Text Extraction:
 The notebook uses the PyMuPDF (fitz) library to read and extract raw text from PDF files. This allows handling of multi-page documents and prepares the text for further processing.
 
-2. ## Text Chunking for Context Preservation: The extracted text is split into overlapping chunks using RecursiveCharacterTextSplitter, maintaining semantic continuity between chunks. This is critical for ensuring accurate embeddings and downstream query responses.
+2. ## Text Chunking for Context Preservation:
+The extracted text is split into overlapping chunks using RecursiveCharacterTextSplitter, maintaining semantic continuity between chunks. This is critical for ensuring accurate embeddings and downstream query responses.
 
-Embedding and Similarity Indexing: Each chunk is converted into a numerical vector using a language model (via LangChain). These vectors are stored in a FAISS index, enabling efficient similarity-based retrieval of text passages.
+3. ## Embedding and Similarity Indexing:
+Each chunk is converted into a numerical vector using a language model (via LangChain). These vectors are stored in a FAISS index, enabling efficient similarity-based retrieval of text passages.
 
-Query Matching and Retrieval: When a user submits a query, it is embedded and compared to the indexed vectors. The system retrieves the top-k most semantically similar text chunks from the original document, enabling intelligent search and question answering over unstructured data.
+4. ## Query Matching and Retrieval:
+ When a user submits a query, it is embedded and compared to the indexed vectors. The system retrieves the top-k most semantically similar text chunks from the original document, enabling intelligent search and question answering over unstructured data.
+
+## 🛠 Error Handling & Troubleshooting
+
+Empty Text Output: Ensure the PDF is not scanned/image-based.
+
+API Errors: Verify your Groq API key and internet connectivity.
+
+## 📚 References
+
+LangChain Docs:https://docs.langchain.com/
+
+FAISS by Facebook: https://github.com/facebookresearch/faiss
+
+Sentence Transformers: https://www.sbert.net/
+
+Groq API: https://groq.com/
 
 
 
